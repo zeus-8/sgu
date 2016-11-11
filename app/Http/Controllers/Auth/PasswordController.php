@@ -1,8 +1,8 @@
 <?php
 
-namespace sigetrab\Http\Controllers\Auth;
+namespace SGU\Http\Controllers\Auth;
 
-use sigetrab\Http\Controllers\Controller;
+use SGU\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class PasswordController extends Controller

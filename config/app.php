@@ -141,10 +141,10 @@ return [
          * Application Service Providers...
          */
         
-        sigetrab\Providers\AppServiceProvider::class,
-        sigetrab\Providers\AuthServiceProvider::class,
-        sigetrab\Providers\EventServiceProvider::class,
-        sigetrab\Providers\RouteServiceProvider::class,
+        SGU\Providers\AppServiceProvider::class,
+        SGU\Providers\AuthServiceProvider::class,
+        SGU\Providers\EventServiceProvider::class,
+        SGU\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
     ],

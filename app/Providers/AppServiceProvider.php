@@ -1,6 +1,6 @@
 <?php
 
-namespace sigetrab\Providers;
+namespace SGU\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

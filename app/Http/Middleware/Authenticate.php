@@ -1,6 +1,6 @@
 <?php
 
-namespace sigetrab\Http\Middleware;
+namespace SGU\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;

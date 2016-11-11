@@ -1,6 +1,6 @@
 <?php
 
-namespace sigetrab\Exceptions;
+namespace SGU\Exceptions;
 
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;

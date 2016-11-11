@@ -1,6 +1,6 @@
 <?php
 
-namespace sigetrab\Jobs;
+namespace SGU\Jobs;
 
 use Illuminate\Bus\Queueable;
 

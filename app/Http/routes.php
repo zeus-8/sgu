@@ -24,3 +24,8 @@ Route::get('/', function () {
 });
 
 Route::resource('usuario', 'UsuarioController');
+Route::get('usuario/{id}/destroy', [
+		'uses' => 'UsuarioController@destroy',
+		'as'   => 'usuario.destroy'
+	]);
+Route::resource('UInactive', 'UserInactiveController');

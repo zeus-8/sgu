@@ -1,15 +1,15 @@
 <?php
 
-namespace sigetrab\Http\Controllers;
+namespace SGU\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Redirect;
 use Session;
-use sigetrab\Http\Controllers\Controller;
-use sigetrab\Http\Requests;
-use sigetrab\Http\Requests\UserCreateRequest;
-use sigetrab\Http\Requests\UserUpdateRequest;
-use sigetrab\User;
+use SGU\Http\Controllers\Controller;
+use SGU\Http\Requests;
+use SGU\Http\Requests\UserCreateRequest;
+use SGU\Http\Requests\UserUpdateRequest;
+use SGU\User;
 class UsuarioController extends Controller
 {
     /**
@@ -105,6 +105,9 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $user->delete();
+        Session::flash('message', 'El usuario ' . $user->name_user . ' fue dado de baja exitosamente');
+        return Redirect::to('/usuario');
     }
 }

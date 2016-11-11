@@ -1,8 +1,8 @@
 <?php
 
-namespace sigetrab\Http\Requests;
+namespace SGU\Http\Requests;
 
-use sigetrab\Http\Requests\Request;
+use SGU\Http\Requests\Request;
 
 class UserCreateRequest extends Request
 {
@@ -31,7 +31,7 @@ class UserCreateRequest extends Request
             'telef2' => 'required|numeric', 
             'email' => 'required|unique:users,email', 
             'direccion' => 'required|string|max:50|min:4|regex:/^[a-zA-ZñÑáéíóúÁÉÍÓÚ0-9\.\- ]+$/i', 
-            'rol' => 'required|in:1,2,3,4',
+            'rol' => 'required|in:1,2,3',
         ];
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace sigetrab\Http\Requests;
+namespace SGU\Http\Requests;
 
-use sigetrab\Http\Requests\Request;
+use SGU\Http\Requests\Request;
 use Illuminate\Routing\Route;
 class UserUpdateRequest extends Request
 {
@@ -37,13 +37,13 @@ class UserUpdateRequest extends Request
 
         return [
             
-           'nombre' => 'required', 
-            'apellido' => 'required', 
+           'nombre' => 'required|string|max:50|min:4|regex:/^[a-zA-ZñÑáéíóúÁÉÍÓÚ0-9\.\- ]+$/i', 
+            'apellido' => 'required|string|max:50|min:4|regex:/^[a-zA-ZñÑáéíóúÁÉÍÓÚ0-9\.\- ]+$/i', 
             'ci' => 'required|unique:users,ci,' . $this->route->getParameter('usuario'), 
-            'telef1' => 'required', 
-            'telef2' => 'required', 
+            'telef1' => 'required|digits_between:10,15', 
+            'telef2' => 'required|digits_between:10,15', 
             'email' => 'required|unique:users,email,' . $this->route->getParameter('usuario'), 
-            'direccion' => 'required', 
+            'direccion' => 'required|string|max:150|min:10|regex:/^[a-zA-ZñÑáéíóúÁÉÍÓÚ0-9\.\,\&\-\/ ]+$/i', 
             'rol' => 'required|in:1,2,3',
         ];
     }

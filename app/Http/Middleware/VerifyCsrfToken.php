@@ -1,6 +1,6 @@
 <?php
 
-namespace sigetrab\Http\Middleware;
+namespace SGU\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
 

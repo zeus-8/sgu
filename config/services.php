@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model'  => sigetrab\User::class,
+        'model'  => SGU\User::class,
         'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

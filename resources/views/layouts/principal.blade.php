@@ -301,6 +301,7 @@ desired effect
           <ul class="treeview-menu">
             <li><a href="{!! URL::to('/usuario/create') !!}"><i class="fa fa-user-plus"> Agregar</i></a></li>
             <li><a href="{!! URL::to('/usuario') !!}"><i class="fa fa-list-ol"> Usuarios</i></a></li>
+            <li><a href="{!! URL::to('/UInactive') !!}"><i class="fa fa-list-ol"> Inactivos</i></a></li>
           </ul>
         </li>
        {{-- <li><a href="#"><i class="fa fa-barcode"></i> <span>Productos</span></a></li>

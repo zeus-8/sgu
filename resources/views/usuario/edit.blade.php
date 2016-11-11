@@ -19,7 +19,7 @@
           <div class="col-md-8 col-md-offset-2">
             <div class="box box-primary">
               <div class="register-box-body">
-                <div class="box-header whith-border"><h3 class="box-title">Nuevo Usuario</h3></div>
+                <div class="box-header whith-border"><h3 class="box-title">Actualizacion de Datos</h3></div>
                 <!-- <p class="login-box-msg">Nuevo Miembro</p> -->
                 @include('usuario.message.message')    
                 {!! Form::model($user,['route'=>['usuario.update', $user->id], 'method'=>'PUT']) !!}

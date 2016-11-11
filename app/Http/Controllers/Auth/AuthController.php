@@ -1,10 +1,10 @@
 <?php
 
-namespace sigetrab\Http\Controllers\Auth;
+namespace SGU\Http\Controllers\Auth;
 
-use sigetrab\User;
+use SGU\User;
 use Validator;
-use sigetrab\Http\Controllers\Controller;
+use SGU\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

@@ -56,14 +56,21 @@
 										                    <span class="caret"></span>
 										                    <span class="sr-only"></span>
 									                	</button>
-														<ul class="dropdown-menu" role="menu">
-															{{-- <li>{!! link_to_route('usuario.edit', $title = 'Consultar', $parameters = $user->id, $attributes = null) !!}</li> --}}
+														{{-- <ul class="dropdown-menu" role="menu">
+															<li>{!! link_to_route('usuario.edit', $title = 'Consultar', $parameters = $user->id, $attributes = null) !!}</li>
 															<li>{!! link_to_route('usuario.edit', $title = 'Modificar', $parameters = $user->id, $attributes = null) !!}</li>
-															{{-- <li>{!! link_to_route('usuario.edit', $title = 'Reset Passwod', $parameters = $user->id, $attributes = null) !!}</li> --}}
-															<!-- <li><a href="#"></a></li> -->
+															<li>{!! link_to_route('usuario.edit', $title = 'Reset Passwod', $parameters = $user->id, $attributes = null) !!}</li>
+															<li><a href="#"></a></li>
 															<li class="divider"></li>
-															<li><a href="{!! route('usuario.destroy', $user->id) !!}">Inactivar</a></li>
-														</ul>
+															<li>{!! Form::open(['route'=>['usuario.destroy', $user->id], 'method'=>'DELETE']) !!}
+																	{!! Form::submit('Inactivar', ['class'=>'btn btn-danger']) !!}																
+																{!! Form::close() !!}
+															</li>
+															<li>{!! link_to_route('usuario.destroy', $title = 'Inactivar', $parameters = $user->id, $attributes = null) !!}</li>
+														</ul> --}}
+														{!! Form::open(['route'=>['usuario.destroy', $user->id], 'method'=>'DELETE']) !!}
+															{!! Form::submit('Inactivar', ['class'=>'btn btn-block btn-primary']) !!}																
+														{!! Form::close() !!}
 									                </div>
 												</td>
 											</tr>

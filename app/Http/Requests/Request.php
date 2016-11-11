@@ -1,6 +1,6 @@
 <?php
 
-namespace sigetrab\Http\Requests;
+namespace SGU\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
