@@ -10,7 +10,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <title>Sigetrab | Control</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <meta name="_token" content="{!! csrf_token() !!}"/>
+  {{-- <meta name="_token" content="{!! csrf_token() !!}"/> --}}
   {{-- <link rel="icon" type="image/png" href="/bee.png" /> --}}
   <!-- Bootstrap 3.3.6 -->
   {!!Html::style('/bootstrap/css/bootstrap.min.css')!!}
@@ -196,7 +196,7 @@ desired effect
               <!-- imagen del usuario logueado -->
               <img src="/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Juan Sierra</span>
+              <span class="hidden-xs">{!! Auth::user()->name_user !!}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
@@ -230,7 +230,7 @@ desired effect
                   <a href="#" class="btn btn-default btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="login" class="btn btn-default btn-flat">Salir</a>
+                  <a href="/login" class="btn btn-default btn-flat">Salir</a>
                 </div>
               </li>
             </ul>
@@ -252,16 +252,16 @@ desired effect
     <section class="sidebar">
 
       <!-- Sidebar user panel (optional) -->
-      {{-- <div class="user-panel">
+      <div class="user-panel">
         <div class="pull-left image">
           <img src="/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Juan Sierra</p>
+          <p>{!! Auth::user()->nombre !!}</p>
           <!-- Status -->
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <a href="/login"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
-      </div> --}}
+      </div>
 
       <!-- search form (Optional) -->
       <!--  
@@ -278,7 +278,8 @@ desired effect
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
-
+        <li class="header"><i class="fa fa-cubes" ></i> DASHBOARD</li>
+        <li><a href="{!! URL::to('home') !!}"><i class="fa fa-home"></i> <span>Home</span></a></li>
         <li class="header"><i class="fa fa-users" ></i> USUARIOS</li>
         <!-- Optionally, you can add icons to the links -->
         <li class="treeview">

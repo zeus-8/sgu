@@ -29,3 +29,4 @@ Route::get('usuario/{id}/destroy', [
 		'as'   => 'usuario.destroy'
 	]);
 Route::resource('UInactive', 'UserInactiveController');
+Route::resource('log', 'LogController');

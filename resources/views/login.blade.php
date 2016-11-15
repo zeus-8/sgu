@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Sigetrab | Log in</title>
+  <title>Beehive Admin | Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <meta name="_token" content="{!! csrf_token() !!}"/>
   <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+  {!! Html::style('/bootstrap/css/bootstrap.min.css') !!}
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  {!!Html::style('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css')!!}
   <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  {!!Html::style('https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css')!!}
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+  {!! Html::style('/dist/css/AdminLTE.min.css') !!}
   <!-- iCheck -->
-  <link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">
+  {!! Html::style('/plugins/iCheck/square/blue.css') !!}
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,23 +26,23 @@
   <![endif]-->
 </head>
 <body class="hold-transition login-page">
+@include('flash::message')
 <div class="login-box">
   <div class="login-logo">
   <!-- DIRECCIONAR A PAGINA DE ESCUELA DE SISTEMAS -->
-    <a href="#"><b>SIGETRAB</b> SGT</a>
+    <a href="#"><b>Beehive</b> Admin</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Coloca tus Datos para Iniciar Sesion</p>
-
-    <form action="home" method="post">
+    {!! Form::open(['route'=>'log.store', 'method'=>'POST']) !!}
       <!--  <input type="hidden" name="_token" value="{{ csrf_token() }}">-->
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="E-mail">
+        {!! Form::email('email', null, ['class'=>'form-control', 'placeholder'=>'E-mail']) !!}
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Clave">
+        {!! Form::password('password', ['class'=>'form-control', 'placeholder'=>'Contraseña']) !!}
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -53,7 +53,7 @@
         </div>
         <!-- /.col -->
       </div>
-    </form>
+    {!! Form::close() !!}
   </div>
   <!-- /.login-box-body -->
 </div>

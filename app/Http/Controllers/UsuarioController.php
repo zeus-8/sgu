@@ -93,7 +93,7 @@ class UsuarioController extends Controller
         $user = User::find($id);
         $user->fill($request->all());
         $user->save();
-        Session::flash('message', 'Los datos se moldificaron exitosamente');
+        Session::flash('message', 'Los datos se modificaron exitosamente');
         return Redirect::to('/usuario');
     }
 
