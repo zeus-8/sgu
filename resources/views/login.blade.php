@@ -29,7 +29,6 @@
 @include('flash::message')
 <div class="login-box">
   <div class="login-logo">
-  <!-- DIRECCIONAR A PAGINA DE ESCUELA DE SISTEMAS -->
     <a href="#"><b>Beehive</b> Admin</a>
   </div>
   <!-- /.login-logo -->
